@@ -1,0 +1,708 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@0;1&family=Arima+Madurai:wght@300;400;500;700;800&family=Dancing+Script:wght@700&family=DynaPuff:wght@500;700&family=Fredoka+One&family=Happy+Monkey&family=Inter:wght@500;700;800&family=Montserrat:wght@500&family=Quicksand&family=Rubik+Dirt&family=Titan+One&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Roman';
+    src: url('../fonts/HelveticaNeueLTStd-Roman.otf');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+	font-family: 'Fairview';
+	src: url('../fonts/Fairview_SmallCaps.otf');
+}
+
+/* ----- */
+
+/* General */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.bg-image{
+	background: url('../images/Dahon\ 2.jpeg');
+	background-size: cover;
+}
+#header{
+	width: 100%;
+	height: 100vh;
+}
+
+body{
+	background: #EDDCD2;
+	width: 100%;
+	font-family: 'Quicksand', sans-serif;
+}
+
+#guest{
+	color: #848483;
+	height: 18px;
+}
+
+#guest ul{
+	list-style: none;
+	float: right;
+	font: 15px 'HelveticaNeueLTStd-Roman';
+}
+.bg-custom{
+	background-color: #cb997e;
+}
+.navbar-brand{
+	border-radius: 50%;
+}
+
+#guest ul li{
+	float: left;
+}
+
+#logo-cart{
+	clear: both;
+	position: relative;
+	margin-top: 10px;
+}
+
+#logo-cart > img{
+	margin-left: -20px;
+	width: 150px;
+	height: 150px;
+}
+
+#shopping-cart{
+	float: right;
+	background: #cb997e;
+	color: black;
+	font: 18px 'HelveticaNeueLTStd-Roman';
+	width: 200px;
+	padding: 2.5px;
+}
+
+
+#shopping-cart div{
+	line-height: 3;
+}
+
+#shopping-cart > img{
+	width: 65px;
+	float: left;
+}
+#plant-type img{
+	height: 450px;
+	width: 100%;
+}
+#plant-type{
+	font-family: 'Arima Madurai', sans-cursive;
+}
+#account{
+	color: #c95a08;
+	font: 18px 'HelveticaNeueLTStd-Roman';
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 220px;
+}
+
+
+nav{
+	width: 100%;
+	height: 100px;
+	margin-top: 5px;
+}
+
+nav ul{
+	font-size: 20px;
+	padding-top: 10px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	gap: 2rem;
+}
+
+nav ul li{	
+	list-style-type: none;
+}
+
+button{
+	outline: none;
+	width: 300px;
+}
+.dropdown .button-width{
+	width: 150px;
+	background: none;
+}
+a{
+	text-decoration: none;	
+}
+#final-output{
+	margin-top: 50px;
+}
+footer a {
+	color: #747371;
+}
+
+footer a:hover {
+	opacity: 0.7;
+}
+
+footer nav{
+	clear: both;
+}
+
+/* ----- */
+
+/* Home */
+
+button{	
+    width: 150px;
+    height: 35px;
+
+    border-radius: 10px;
+    background-color: #a5a58d;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+section#ads div div h1{
+	font-size: 60px;
+    color: rgba(3, 3, 17, 0.788);
+	
+	font-family: 'Arima Madurai', cursive;
+
+	margin-top: 200px;
+	
+}
+
+section#ads div#small{
+	width: 100%;
+}
+section#ads div#small img{
+	width: 100%;
+}
+#transaction-part{
+	width: 100%;
+}
+#transaction-part div img{
+	width: 200px;
+	height: 200px;
+}
+#transaction-part div h3{
+	margin-top: -50px;
+}
+
+#plant-showcase{
+	width: 100%;
+}
+#plant-showcase img{
+	width: 100%;
+	height: 250px;
+}
+#last-button{
+	margin-top: 40px;
+
+	text-align: center;
+}
+#last-button button a{
+	color: white;
+}
+footer{
+	margin-top: 20px;
+	width: 100%;
+	background-color: #cb997e;
+	color: white;
+
+}
+
+h2{
+	text-align: center;
+}
+.product-item{
+	width: 240px;
+	text-align: center;
+	font-family: 'HelveticaNeueLTStd-Roman';
+	float: left;
+	position: relative;
+}
+
+.product-item img{
+	height: 140px;
+	padding-top: 5px;
+}
+
+.product-name{
+	color: #da4b05;
+}
+
+.product-price{
+	font-size: 17px;
+}
+
+/* ----- */
+
+/* Clothes Shoes Accessories */
+#advertisement{
+	background: #fff;
+	width: 100%;
+	height: 600px;
+	border-radius: 10px;
+	margin-top: 10px;
+	padding: 10px;
+
+	text-align: center;
+
+}
+#advertisement h1{
+	font-size: 42px;
+	letter-spacing: 2px;
+}
+.male{
+	background: #fff;
+	width: 100%;
+	height: 500px;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-right: 5%;
+	padding: 10px;
+	overflow: hidden;
+	float: left;
+}
+.female{
+	background: #fff;
+	width: 100%;
+	height: 500px;
+	border-radius: 10px;
+	margin-top: 10px;
+	padding: 10px;
+	overflow: hidden;
+	float:left;
+}
+
+#women-clothes, #women-shoes, #women-accessories,
+#indoor-plants, #men-shoes, #men-accessories{
+	background-color: #EDDCD2;
+	width: 100%;
+	min-height: 700px;
+	border-radius: 10px;
+	margin-top: 10px;
+	padding: 10px;
+	overflow: auto;
+
+	font-family: 'Quicksand', sans-serif;
+}
+#advertisement img{
+	width: 800px;
+	height: 510px;
+}
+
+.show_details{
+	background: #4d4b4b;
+	font: 22px 'Fairview';
+	border: none;
+	color: #fff;
+	width: 80px;
+	padding: 2.5px 0;
+	border-radius: 10px;
+}
+
+.add_cart{
+	background: #da4b05;
+	font: 22px 'Fairview';
+	border: none;
+	width: 80px;
+	padding: 2.5px 0;
+	border-radius: 10px;
+	color: #fff;
+	margin-top: 5px;
+}
+.lifestyle{
+	margin-top: 50px;
+	text-align: center;
+
+	font-family: 'Arima Madurai', cursive;
+	font-size: 28px;
+}
+.gardening{
+	margin-top: 50px;
+	text-align: center;
+
+	font-family: 'Arima Madurai', cursive;
+	font-size: 28px;
+}
+
+#blog-section{
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	gap: 1rem;
+}
+#blog-section div{
+	width: 100%;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+
+	gap: 1rem;
+}
+#blog-section div h1{
+	font-family: 'Arima Madurai', cursive;
+}
+
+#blog-section-2{
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	gap: 1rem;
+}
+#blog-section-2 div{
+	width: 500px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+
+	gap: 1rem;
+}
+#blog-section-2 div h1{
+	font-family: 'Arima Madurai', cursive;
+}
+#blog-display{
+	width: 100%;
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	flex-direction: column;
+}
+#blog-display .first-paragraph{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+#blog-display .first-paragraph img{
+	width: 400px;
+	height: 400px;
+}
+#blog-display div h1{
+	font-family: 'Arima Madurai', cursive;
+}
+
+.welcome{
+	width: 100%;
+
+	font-family: 'Arima Madurai', cursive;
+}
+.about-info{
+	width: 100%;
+}
+
+.about-details .about-info div p{
+	font-family: 'Arima Madurai', cursive;
+}
+
+
+#filter .header-lbl{
+	width: 100%;
+	margin: 8px 0;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+#filter .content{
+	width: 100%;
+	min-height: 200px;
+
+	background-color: #cb997e;
+	color: white;
+}
+
+#filter button{
+	border: 0;
+	background: #c0bfbe;
+}
+
+.price-filter{
+	width: 300px;
+	float: left;
+	color: white;
+}
+
+.price-filter input{
+	margin-left: 15px;
+	margin-bottom: 3px;
+}
+
+.price-filter input:first-of-type{
+	margin-top: 8px;
+}
+
+.color-filter{
+	width: 300px;
+	float: left;
+	color: #7f7b78;
+}
+
+.discount{
+	position: absolute;
+	top: 0px;
+	color: #ff0000;
+	right: 0px;
+
+}
+
+.discount img{
+	height: 80px;
+}
+/* HERO BANNER */
+
+.hero-banner{
+	width: 100%;
+	font-family: 'Arima Madurai', cursive;
+}
+
+
+#directory{
+	width: 100%;
+}
+#directory .first-content h1{
+	font-family: 'Arima Madurai', cursive;
+}
+#directory .first-content button{
+	width: 200px;
+	height: 40px;
+}
+#directory .second-content a{
+	color: #0009;
+	font-size: 18px;
+}
+
+/* ----- */
+
+/* faq */
+#questions{
+	width: 1154px;
+	min-height: 600px;
+	background: #000;
+	border: 3px solid #535252;
+	margin-top: 5px;
+	border-radius: 10px;
+	padding: 20px;
+	font: 18px 'HelveticaNeueLTStd-Roman';
+	color: #fff;
+}
+
+.orange{
+	color: #da4b05;
+}
+
+#questions p{
+	margin-bottom: 20px;
+}	
+/* ----- */
+
+/* Cart */
+.header-lbl{
+	font-family: 'Arima Madurai', cursive;
+	font-size: 20px;
+	color: black;
+	margin: 20px;
+}
+.carousel{
+	background-color: #000;
+}
+.carousel img{
+	width: 100%;
+	height: 450px;
+}
+.btn-link{
+	background: #000;
+	color: #fff;
+	font: 20px 'HelveticaNeueLTStd-Roman';
+	padding: 20px 0;
+	text-align: center;
+	width: 300px;
+	margin-top: 20px;
+}
+
+.btn-link a{
+	color: #fff;
+}
+
+.btn-link a:hover{
+	opacity: 0.7;	
+}
+
+#back-btn{
+	float: left;
+	margin-left: 20px;
+}
+h1{
+	font-family: 'Arima Madurai', cursive;
+}
+#out-btn{
+	float: right;
+	margin-right: 20px;
+}
+
+#cart-items{
+	margin-bottom: 20px;
+	clear: both;
+	width: 100%;
+}
+
+#tbl-items{
+	background: #fff;
+	width: 96%;
+	margin: 0 auto;
+	border-radius: 5px;
+	font-family: 'HelveticaNeueLTStd-Roman';
+}
+
+#tbl-items tr{
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#tbl-items th{
+	font-size: 18px;
+	padding: 5px 0;
+}
+
+#tbl-items tr{
+	font-size: 16px;
+}
+
+#tbl-items td, th{
+	width: 15%;
+}
+
+#tbl-items img{
+	width: 160px;
+}
+
+#final-total{
+	float: right;
+	color: #fff;
+	font: 30px 'HelveticaNeueLTStd-Roman';
+	margin-right: 25px;
+	margin-top: 15px;
+}
+
+.removebtn{
+	background: #fff;
+	border: 0;
+	font: 15px 'HelveticaNeueLTStd-Roman';
+	color: #bdb5b5;
+}
+
+.removebtn:hover{
+	opacity: 0.7;
+}
+
+#cart-no-item{
+	color: #fff;
+	margin-left: 25px;
+	font: 20px 'Helvetica';
+}
+
+/* ----- */
+
+/* Payment */
+.content{
+	font: 16px 'HelveticaNeueLTStd-Roman';
+	background: #fff;
+	border-radius: 5px;
+	width: 100%;
+	padding: 2%;
+	margin: 0 auto;
+	min-height: 72px;
+}
+
+body#payment input{
+	margin: 10px;
+	font: 16px 'HelveticaNeueLTStd-Roman';
+}
+
+body#payment label{
+	display: inline-block;
+	min-width: 50px;
+}
+#summary-payment{
+	width: 100%;
+}
+
+#summary-payment table{
+	width: 100%;
+}
+
+#summary-payment td {
+	width: 100%;
+}
+
+#summary-payment tr:nth-of-type(3)
+{
+	font-size: 24px;
+}
+
+#summary-payment button{
+	border: 0;
+	color: #fff;
+	font-size: 18px;
+	
+	float: right;
+	margin-top: 20px;
+}
+
+.note{
+	margin-left: 10px;
+	color: #787878;
+	font-size: 14px;
+}
+
+
+section#payment-method  input[type="radio"] + br + p, section#payment-method  input[type="radio"] + br + div{
+	display: none;
+} 
+
+#payment form{
+	clear: both;
+}
+label{
+	font-family: 'Quicksand', sans-serif;
+}
+
+/* MEDIA BREAKPOINTS */
+
+@media screen and (max-width: 767px){
+	.navbar-brand img{
+		padding-bottom: 50px;
+	}
+	button.navbar-toggler{
+		padding-bottom: 90px;
+	}
+
+	#shopping-cart{
+		display: none;
+	}
+	footer p, h4{
+		text-align: center;
+	}
+	footer .hidden{
+		display: none;
+	}
+	section#ads div div h1{
+		margin-top: 150px;
+
+		font-size: 32px;
+	}
+}

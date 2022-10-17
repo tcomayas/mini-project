@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+	<title>Dahon</title>
+	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="clothes" onload="loadClothes('mclothes')">
+	<h5 class="text-center">Free Shipping above ₱1,000 | SHOP NOW</h5>
+	<div id="header">
+		<nav class="navbar navbar-expand-sm bg-custom navbar-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img class="img-fluid" style="width: 130px; height: 130px;"
+						src="images/DAHON logo trasparent bg.png">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="navbar-nav mx-auto bg-custom d">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle text-sm-dark" href="#" role="button"
+								data-bs-toggle="dropdown">Plants</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item text-sm-dark" href="mclothes.html">Indoor Plants</a></li>
+								<li><a class="dropdown-item" href="wclothes.html">Floor Plants</a></li>
+								<li><a class="dropdown-item" href="mshoes.html">Bundles</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="shoes.html" class="nav-link text-sm-dark">Plant Care</a>
+						</li>
+						<li class="nav-item">
+							<a href="accessories.html" class="nav-link text-sm-dark">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a href="about.html" class="nav-link text-sm-dark">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a href="cart.html" class="nav-link text-sm-dark">
+								<i class="bi bi-cart fs-1 text-light d-lg-none text-sm-center"></i>
+							</a>
+						</li>
+					</ul>
+
+					<div id="shopping-cart">
+						<img src="images/cart.png">
+						<div>
+							<a href="cart.html" class="text-light">Shopping Cart</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section id="advertisement">
+			<h1>INDOOR PLANTS</h1>
+			<img src="./images/Indoor plants.jpeg" alt="" class="img-fluid">
+		</section>
+
+	</div>
+
+		
+		
+		<section id="filter">
+			<div class="header-lbl">FILTER<button type="button"> &#9660 </button></div>
+			<div class="content">
+				<div class="price-filter">Price <br>
+					<input type="radio" name="price" value="0" checked>&nbsp See all <br>
+					<input type="radio" name="price" value="1">&nbspPhp 0 to Php 1000 <br>
+					<input type="radio" name="price" value="2">&nbspPhp 1000 to Php 2000 <br>
+					<input type="radio" name="price" value="3">&nbspPhp 2000 to Php 3000 <br>
+					<input type="radio" name="price" value="4">&nbspPhp 3000 to Php 4000 <br>
+					<input type="radio" name="price" value="5">&nbspPhp 4000 to Php 5000 <br>
+					<input type="radio" name="price" value="6">&nbspPhp 5000 and above 
+				</div>
+		</section>
+		
+		<section id="indoor-plants">
+			<div id="wrapper" class="justify-content-center"></div>
+		</section>
+
+		<footer>
+			<div>
+				<p>We are dedicated in making plants accessible to you by hand-picking individual plants that would complement your space. We will deliver them at your doorstep and provide care guides specific to your chosen plants’ needs - allowing them not only to survive but also to flourish.</p>
+				<a href="#" class="fa fa-facebook"></a>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-instagram"></a>
+			</div>
+	
+			<div>
+				<h4>Plant lovers will delight in our newsletters!</h4>
+				<p>Sign up and be the first to know of our newest collections.</p>
+			</div>
+	
+			<div id="third">
+				<input type="search" placeholder="Your email address">
+				<button>SIGN UP</button>
+			</div>
+	
+			<div>
+				<h4>Useful Links</h4>
+				<p>Contact <br> FAQ <br>Plant Care/Merchandise <br>Safe Delivery</p>
+			</div>
+		</footer>
+	</div>
+
+	<script src="./assets/js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

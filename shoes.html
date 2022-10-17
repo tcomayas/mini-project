@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<title>Dahon</title>
+</head>
+
+<body id="clothes" onload="loadShoes('mshoes')">
+	<h5 class="text-center">Free Shipping above ₱1,000 | SHOP NOW</h5>
+	<div id="container">
+		<nav class="navbar navbar-expand-sm bg-custom navbar-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img class="img-fluid" style="width: 130px; height: 130px;"
+						src="images/DAHON logo trasparent bg.png">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="navbar-nav mx-auto bg-custom d">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle text-sm-dark" href="#" role="button"
+								data-bs-toggle="dropdown">Plants</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item text-sm-dark" href="mclothes.html">Indoor Plants</a></li>
+								<li><a class="dropdown-item" href="wclothes.html">Floor Plants</a></li>
+								<li><a class="dropdown-item" href="mshoes.html">Bundles</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="shoes.html" class="nav-link text-sm-dark">Plant Care</a>
+						</li>
+						<li class="nav-item">
+							<a href="accessories.html" class="nav-link text-sm-dark">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a href="about.html" class="nav-link text-sm-dark">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a href="cart.html" class="nav-link text-sm-dark">
+								<i class="bi bi-cart fs-1 text-light d-lg-none text-sm-center"></i>
+							</a>
+						</li>
+					</ul>
+
+					<div id="shopping-cart">
+						<img src="images/cart.png">
+						<div>
+							<a href="cart.html" class="text-light">Shopping Cart</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		</header>
+
+		<div class="hero-banner mt-5">
+			<h1 class="text-center">GENERAL PLANT CARE</h1>
+			<p class="text-center">Though most of the plants available here is low-maintenance, some love and attention
+				is key to make sure that your plant lives a long, happy, and healthy life. It’s also important to note
+				that just like you, plants experience stress too, and it is quite normal for them to experience this as
+				they adjust to their new homes.</p>
+		</div>
+
+		<section id="plantcare-image">
+			<div class="row">
+				<div class="col-12 col-lg-6">
+					<img class="img-fluid" src="./images/General plant care.jpeg" alt="General Plant Care Image"
+						style="height: 450px; width: 100%;">
+				</div>
+
+				<div class="col-12 col-lg-6" style="height: 450px;">
+					<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+								class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+								aria-label="Slide 3"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+								aria-label="Slide 4"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active" data-bs-interval="1000">
+								<img src="./images/Plant care 1.JPG" class="d-block w-100" alt="...">
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Soil</h5>
+									<p>On average, indoor plants are watered once a week. But the best way is to check
+										the soil by dipping your finger or using a stick. If the soil is still soggy or
+										sticky, no need to water yet. Eventually, you will get the hang of your plant's
+										watering schedule.</p>
+								</div>
+							</div>
+							<div class="carousel-item" data-bs-interval="1000">
+								<img src="./images/Plant care 2.JPG" class="d-block w-100" alt="...">
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Water</h5>
+									<p>Water all the way through the pot until you see some seeping out from the
+										drainage holes. This makes sure that the water reaches the plant's root system.
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item" data-bs-interval="1000">
+								<img src="images/Plant care 3.JPG" class="d-block w-100" alt="...">
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Sunlight</h5>
+									<p>Plants should have a source of light (though the intensity varies). Plants placed
+										along dark corners of the house or in the middle of offices should be rotated to
+										areas near windows so that it can absorb some form of light.</p>
+								</div>
+							</div>
+							<div class="carousel-item" data-bs-interval="1000">
+								<img src="images/Plant care 4.JPG" class="d-block w-100" alt="...">
+								<div class="carousel-caption d-none d-md-block">
+									<h5 class="fs-sm-5">Leaves</h5>
+									<p>Dust may build up on the leaves. To bring bacj the shine of the leaves and to
+										allow them to breathe, regularly wipe them with a damp soft cloth or if your
+										space allows. give them a shower.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<div id="directory" class="mt-5">
+			<div class="row">
+				<div class="col-12 col-lg-6 text-center">
+					<div class="first-content">
+						<h1>PLANT LIST</h1>
+						<button>FULL DIRECTORY</button>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6">
+					<div class="second-content pt-5">
+						<div class="container">
+							<div class="row">
+								<div class="col-4">
+									<a href="#" class="text-decoration-none text-center">Aglaonema</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none text-center">Dracaena Marginata</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none text-center">Monstera Deliciosa</a>
+								</div>
+							</div>
+
+							<div class="row mt-3">
+								<div class="col-4">
+									<a href="#" class="text-decoration-none text-center">Alocasia</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none text-center">Fiddle Leaf Fig</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none text-center">Peace Lily</a>
+								</div>
+							</div>
+
+							<div class="row mt-3">
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Bamboo Palm</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Heartleaf Philodendron</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Peperomia Obtusifolia</a>
+								</div>
+							</div>
+
+							<div class="row mt-3">
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Boston Fern</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Herbs</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Philodendron Selloum</a>
+								</div>
+							</div>
+
+							<div class="row mt-3">
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Butterfly Palm</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Licuala Grandis</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Rhapis Excelsa</a>
+								</div>
+							</div>
+
+							<div class="row mt-3">
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Cactus</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Livistona Australis</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Rubber Plant</a>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Dracaena Anita</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">MacArthur Palm</a>
+								</div>
+								<div class="col-4">
+									<a href="#" class="text-decoration-none">Snake Plant</a>
+								</div>
+							</div>
+
+						</div>
+
+
+
+
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="mt-5">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 col-lg-3 text-start">
+						<p class="lead fs-6">We are dedicated in making plants accessible to you by hand-picking
+							individual
+							plants that would complement your space. We will deliver them at your doorstep and provide
+							care
+							guides specific to your chosen plants’ needs - allowing them not only to survive but also to
+							flourish.</p>
+						<div class="text-center mb-5">
+							<button class="btn btn-outline-light rounded-circle" style="width: 50px; height: 50px;"><i
+									class="bi-facebook"></i></button>
+							<button class="btn btn-outline-light rounded-circle" style="width: 50px; height: 50px;"><i
+									class="bi-twitter"></i></button>
+							<button class="btn btn-outline-light rounded-circle" style="width: 50px; height: 50px;"><i
+									class="bi-instagram"></i></button>
+						</div>
+					</div>
+					<div class="col-12 col-lg-3 text-start hidden">
+						<div class="ms-5">
+							<h4 class="fs-6">Plant lovers will delight in our newsletters!</h4>
+							<p>Sign up and be the first to know of our newest collections.</p>
+
+							<input type="text" placeholder="Your email address"><br>
+							<button class="mt-1">Sign Up</button>
+						</div>
+					</div>
+
+					<div class="col-12 col-lg-3 text-start hidden">
+						<div class="ms-5">
+							<h4 class="fs-6 ms-5">Useful Links</h4>
+							<p class="ms-5">Contact <br> FAQ <br> Plant Care/Merchandise <br> Safe Delivery</p>
+						</div>
+					</div>
+
+					<div class="col-12 col-lg-3 text-start">
+						<h4 class="fs-6">Contact Info</h4>
+						<p> Address: Santa Rosa Lapu-Lapu City, Cebu Philippines 6015. <br>
+							Contact Number: +63945-859-3537 <br>
+							Email address: greenph@dahon.com</p>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+	</div>
+
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/script.js"></script>
+	<script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

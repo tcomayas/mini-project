@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trendsetter</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body id="accessories" onload="loadAccessories('maccessories')">
+	<div id="container">
+		<header>
+			<div id="guest">
+				<ul>
+					<li>thiskid |</li>
+					<li>&nbsp Logout</li>
+				</ul>
+			</div>
+			<div id="logo-cart">
+				<img src="images/logo.png">
+				<div id="shopping-cart">
+					<img src="images/cart.png">
+					<div><a href="cart.html">Shopping Cart</a></div>
+				</div>
+				<div id="account"> thiskids@gmail.com </div>
+			</div>
+			<nav>
+				<ul>
+					<li>&nbsp <a href="index.html">home</a> |</li>
+					<li>&nbsp <a href="clothes.html">clothes</a> |
+						<ul>
+							<li><a href="indoor.html">Men</a></li>
+							<li><a href="wclothes.html">Women</a></li>
+						</ul>
+					</li>
+					<li>&nbsp <a href="shoes.html">shoes</a> |
+						<ul>
+							<li><a href="mshoes.html">Men</a></li>
+							<li><a href="wshoes.html">Women</a></li>
+						</ul>
+					</li>
+					<li>&nbsp <a href="accessories.html">accessories</a> |
+						<ul>
+							<li><a href="maccessories.html">Men</a></li>
+							<li><a href="waccessories.html">Women</a></li>
+						</ul>
+					</li>
+					<li>&nbsp <a href="faq.html">faq</a> |</li>
+				</ul>
+			</nav>			
+		</header>
+		<section id="advertisement"><img src="images/maleaccadvertisement.png"></section>
+		<section id="filter">
+			<div class="header-lbl">FILTER<button type="button"> &#9660 </button></div>
+			<div class="content">
+				<div class="price-filter">Price <br>
+					<input type="radio" name="price" value="0" checked>&nbsp See all <br>
+					<input type="radio" name="price" value="1">&nbspPhp 0 to Php 1000 <br>
+					<input type="radio" name="price" value="2">&nbspPhp 1000 to Php 2000 <br>
+					<input type="radio" name="price" value="3">&nbspPhp 2000 to Php 3000 <br>
+					<input type="radio" name="price" value="4">&nbspPhp 3000 to Php 4000 <br>
+					<input type="radio" name="price" value="5">&nbspPhp 4000 to Php 5000 <br>
+					<input type="radio" name="price" value="6">&nbspPhp 5000 and above 
+				</div>
+				<div class="color-filter">Color<br>
+				<table>
+					<tr>
+						<td><input type="checkbox" value="black">&nbspblack</td>
+						<td><input type="checkbox" value="red">&nbspred</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" value="white">&nbspwhite</td>
+						<td><input type="checkbox" value="purple">&nbsppurple</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" value="beige">&nbspbeige</td>
+						<td><input type="checkbox" value="green">&nbspgreen</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" value="blue">&nbspblue</td>
+						<td><input type="checkbox" value="yellow">&nbspyellow</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" value="gray">&nbspgray</td>
+						<td><input type="checkbox" value="brown">&nbspbrown</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" value="pink">&nbsppink</td>
+						<td><input type="checkbox" value="gold">&nbspgold</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<section id="men-accessories">
+			<div id="wrapper"></div>
+		</section>
+		<footer>
+			<nav>
+				<ul>
+					<li>&nbsp <a href="index.html">home</a> |</li>
+					<li>&nbsp <a href="clothes.html">clothes</a> |</li>
+					<li>&nbsp <a href="shoes.html">shoes</a> |</li>
+					<li>&nbsp <a href="accessories.html">accessories</a> |</li>
+					<li>&nbsp <a href="faq.html">faq</a> |</li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+</body>
+</html>

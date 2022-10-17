@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<title>Dahon</title>
+
+	<script>
+		function loadcart() {
+			var code = "";
+			var total = 0;
+			if (sessionStorage.cartCount) {
+				code = "<table id='tbl-items'>" +
+					"<tr><th>ITEM</th><th>SIZE</th><th>QUANTITY</th><th>PRICE</th><th>TOTAL PRICE</th>";
+				for (a = 0; a < sessionStorage.cartCount; a++) {
+					code += "<tr id='" + JSON.parse(sessionStorage.cart)[a].id + "'><td><img src='" + JSON.parse(sessionStorage.cart)[a].imgLoc + "'><br/><button type='button' class='removebtn' style='color: black;' onclick='removecart(\"" + JSON.parse(sessionStorage.cart)[a].id + "\"))'>REMOVE</button></td>" +
+						"<td>" + JSON.parse(sessionStorage.cart)[a].size + "</td>" +
+						"<td><input type='number' style='width: 50px' min='1' max='4' value='" + JSON.parse(sessionStorage.cart)[a].qty + "'></td>";
+					if (JSON.parse(sessionStorage.cart)[a].sale) {
+						code += "<td><span class='dprice'>P" + Number(JSON.parse(sessionStorage.cart)[a].price).toFixed(2) + "</span><br/>P<span class='nprice'>" + (Number(JSON.parse(sessionStorage.cart)[a].price) / 2).toFixed(2) + "</span></td>";
+						code += "<td>P <span class='fprice'>" + ((Number(JSON.parse(sessionStorage.cart)[a].price) / 2) * Number(JSON.parse(sessionStorage.cart)[a].qty)).toFixed(2) + "</span></td></tr>";
+						total += (Number(JSON.parse(sessionStorage.cart)[a].price) / 2) * Number(JSON.parse(sessionStorage.cart)[a].qty);
+					}
+					else {
+						code += "<td>P<span class='nprice'>" + Number(JSON.parse(sessionStorage.cart)[a].price).toFixed(2) + "</span></td>";
+						code += "<td>P<span class='fprice'>" + (Number(JSON.parse(sessionStorage.cart)[a].price) * Number(JSON.parse(sessionStorage.cart)[a].qty)).toFixed(2) + "</span></td></tr>";
+						total += Number(JSON.parse(sessionStorage.cart)[a].price) * Number(JSON.parse(sessionStorage.cart)[a].qty);
+					}
+
+
+				}
+				code += "</table>" +
+					"<div id='final-total'>FINAL TOTAL: P" + total.toFixed(2) + "</div>";
+				sessionStorage.totalCart = total;
+				document.getElementById('out-btn').style.display = 'block';
+			}
+
+			else {
+				code = "<p id='cart-no-item'>No items in the cart</p>";
+				//hide checkout link
+				document.getElementById("out-btn").style.display = 'none';
+			}
+			document.getElementById("cart-items").innerHTML = code;
+		}
+		$(document).ready(function () {
+
+			$(document).on('change', '#tbl-items input[type="number"]', function () {
+				var qty = $(this).val();
+				var price = $(this).parent().next().find('.nprice').html();
+				var id = $(this).parent().parent().attr('id');
+				var total = Number(sessionStorage.totalCart)
+				//update in local storage
+				var json = JSON.parse(sessionStorage["cart"]);
+				for (i = 0; i < json.length; i++)
+					if (json[i].id == id) json[i].qty = qty;
+				sessionStorage["cart"] = JSON.stringify(json);
+
+				//display final price
+				total -= $(this).parent().next().next().find('.fprice').html();
+				total += (qty * price);
+				$(this).parent().next().next().find('.fprice').html((qty * price).toFixed(2));
+				$('#final-total').html("FINAL TOTAL: P" + " " + total.toFixed(2));
+
+				sessionStorage.totalCart = total;
+			});
+
+		});
+
+		function removecart(id) {
+			if (confirm("Are you sure you want to remove this item from the cart")) {
+				//Updating total
+				total -= $("#" + id + " .fprice").html();
+				sessionStorage.totalCart = total;
+				$("#final-total").html("FINAL TOTAL: P" + total.toFixed(2));
+
+				//Remove from table
+				$("#" + id).remove();
+
+				//to delete in sessionStorage
+				var json = JSON.parse(sessionStorage["cart"]);
+				for (i = 0; i < json.length; i++)
+					if (json[i].id == id) json.splice(i, 1);
+				sessionStorage["cart"] = JSON.stringify(json);
+				sessionStorage.cartCount -= 1;
+			}
+		}
+	</script>
+</head>
+
+<body id="cart" onload="loadcart()">
+	<h5 class="text-center">Free Shipping above ₱1,000 | SHOP NOW</h5>
+	<div id="header">
+		<nav class="navbar navbar-expand-sm bg-custom navbar-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img class="img-fluid" style="width: 130px; height: 130px;"
+						src="images/DAHON logo trasparent bg.png">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="navbar-nav mx-auto bg-custom d">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle text-sm-dark" href="#" role="button"
+								data-bs-toggle="dropdown">Plants</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item text-sm-dark" href="mclothes.html">Indoor Plants</a></li>
+								<li><a class="dropdown-item" href="wclothes.html">Floor Plants</a></li>
+								<li><a class="dropdown-item" href="mshoes.html">Bundles</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="shoes.html" class="nav-link text-sm-dark">Plant Care</a>
+						</li>
+						<li class="nav-item">
+							<a href="accessories.html" class="nav-link text-sm-dark">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a href="about.html" class="nav-link text-sm-dark">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a href="cart.html" class="nav-link text-sm-dark">
+								<i class="bi bi-cart fs-1 text-light d-lg-none text-sm-center"></i>
+							</a>
+						</li>
+					</ul>
+
+					<div id="shopping-cart">
+						<img src="images/cart.png">
+						<div>
+							<a href="cart.html" class="text-light">Shopping Cart</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section id="cart-content">
+			<div class="header-lbl">
+				<h6>SHOPPING CART</h6>
+			</div>
+			<div class="row">
+				<div class="col-12">					
+					<div id="cart-items"></div>
+				</div>
+			</div>
+			<div id="cart-buttons">
+				<div class="row">
+					<div class="col-12 col-lg-6">
+						<div class="btn-link" id="back-btn">
+							<a href="index.html">CONTINUE SHOPPING?</a>
+						</div>
+					</div>
+				</div>
+				<div class="btn-link" id="out-btn">
+					<a href="payment.html">CHECK-OUT?</a>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer class="mt-5">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-lg-3 text-start">
+					<p class="lead fs-6">We are dedicated in making plants accessible to you by hand-picking individual
+						plants that would complement your space. We will deliver them at your doorstep and provide care
+						guides specific to your chosen plants’ needs - allowing them not only to survive but also to
+						flourish.</p>
+					<div class="text-center mb-5">
+						<button class="btn btn-outline-light rounded-circle" style="width: 50px; height: 50px;"><i
+								class="bi-facebook"></i></button>
+						<button class="btn btn-outline-light rounded-circle" style="width: 50px; height: 50px;"><i
+								class="bi-twitter"></i></button>
+						<button class="btn btn-outline-light rounded-circle" style="width: 50px; height: 50px;"><i
+								class="bi-instagram"></i></button>
+					</div>
+				</div>
+				<div class="col-12 col-lg-3 text-start hidden">
+					<div class="ms-5">
+						<h4 class="fs-6">Plant lovers will delight in our newsletters!</h4>
+						<p>Sign up and be the first to know of our newest collections.</p>
+
+						<input type="text" placeholder="Your email address"><br>
+						<button class="mt-1">Sign Up</button>
+					</div>
+				</div>
+
+				<div class="col-12 col-lg-3 text-start hidden">
+					<div class="ms-5">
+						<h4 class="fs-6 ms-5">Useful Links</h4>
+						<p class="ms-5">Contact <br> FAQ <br> Plant Care/Merchandise <br> Safe Delivery</p>
+					</div>
+				</div>
+
+				<div class="col-12 col-lg-3 text-start">
+					<h4 class="fs-6">Contact Info</h4>
+					<p> Address: Santa Rosa Lapu-Lapu City, Cebu Philippines 6015. <br>
+						Contact Number: +63945-859-3537 <br>
+						Email address: greenph@dahon.com</p>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
